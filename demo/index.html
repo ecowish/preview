@@ -6,19 +6,35 @@
         <link rel="stylesheet" href="css/style.css" />
         <style>
             header {
-                background-color: red;
             }
             main {
-                background-image: linear-gradient(black, white);
                 height: 1000px;
             }
             footer {
+            }
+            nav {
+                height: 100%;
+                width: 100px;
+                background-color: red;
+            }
+            menu {
+                width: 50px;
                 background-color: blue;
             }
         </style>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     </head>
     <body>
-        <header></header>
+        <header>
+            <nav>
+                <menu></menu>
+            </nav>
+            <form id="search">
+                <input type="text" id="query" name="query" placeholder="검색" />
+                <a>[검색]</a>
+            </form>
+        </header>
         <main></main>
         <footer></footer>
     </body>

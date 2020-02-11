@@ -1,8 +1,11 @@
 :root {
-    --header-height: 58px;
+    --header-height: 36px;
+    --header-padding: 5px;
     --header-border-color: #ccc;
+    --header-background-color: white;
 
-    --footer-height: 100px;
+    --footer-height: 90px;
+    --footer-padding: 5px;
     --footer-border-color: #444;
     --footer-background-color: #444;
     --footer-color: white;
@@ -19,10 +22,36 @@ header {
     top: 0;
     width: 100%;
     border-bottom: 1px solid var(--header-border-color);
+    background-color: var(--header-background-color);
+    padding: var(--header-padding) 0;
+}
+
+header > nav {
+    float: left;
+    margin-left: var(--header-padding);
+}
+
+header > nav > menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 100%;
+}
+
+header > #search {
+    margin-right: var(--header-padding);
+    line-height: var(--header-height);
+    float: right;
+    height: 100%;
+    text-align: right;
 }
 
 main {
-    margin-top: var(--header-height);
+    margin-top: var(--header-padding);
 }
 
 footer {
@@ -30,4 +59,5 @@ footer {
     border-top: 1px solid var(--footer-border-color);
     background-color: var(--footer-background-color);
     color: var(--footer-color);
+    padding: var(--footer-padding);
 }
