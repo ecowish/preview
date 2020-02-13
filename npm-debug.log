@@ -1,0 +1,184 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'node',
+1 verbose cli   '-g' ]
+2 info using npm@2.15.9
+3 info using node@v4.5.0
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'node', null ]
+7 verbose cache add spec node
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'node',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'node',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed node@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for node
+11 info addNameTag [ 'node', 'latest' ]
+12 silly mapToRegistry name node
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'node',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'node',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/node
+17 verbose addNameTag registry:https://registry.npmjs.org/node not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/node
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 15:41:55
+21 verbose request id 1431d63f6451ebdf
+22 verbose etag W/"424f8b08cfc48e900b864402f9e0188a"
+23 verbose lastModified Wed, 12 Feb 2020 04:44:59 GMT
+24 http request GET https://registry.npmjs.org/node
+25 http 304 https://registry.npmjs.org/node
+26 verbose headers { date: 'Wed, 12 Feb 2020 06:41:55 GMT',
+26 verbose headers   connection: 'keep-alive',
+26 verbose headers   'set-cookie': [ '__cfduid=d3162a17d00602fa13ed4184c2f7af7991581489715; expires=Fri, 13-Mar-20 06:41:55 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+26 verbose headers   'cf-ray': '563c9464acf1a1f5-ICN',
+26 verbose headers   age: '2826',
+26 verbose headers   'cache-control': 'public, max-age=300',
+26 verbose headers   etag: '"424f8b08cfc48e900b864402f9e0188a"',
+26 verbose headers   'last-modified': 'Wed, 12 Feb 2020 04:44:59 GMT',
+26 verbose headers   vary: 'Accept-Encoding',
+26 verbose headers   'cf-cache-status': 'HIT',
+26 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+26 verbose headers   server: 'cloudflare' }
+27 silly get cb [ 304,
+27 silly get   { date: 'Wed, 12 Feb 2020 06:41:55 GMT',
+27 silly get     connection: 'keep-alive',
+27 silly get     'set-cookie': [ '__cfduid=d3162a17d00602fa13ed4184c2f7af7991581489715; expires=Fri, 13-Mar-20 06:41:55 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+27 silly get     'cf-ray': '563c9464acf1a1f5-ICN',
+27 silly get     age: '2826',
+27 silly get     'cache-control': 'public, max-age=300',
+27 silly get     etag: '"424f8b08cfc48e900b864402f9e0188a"',
+27 silly get     'last-modified': 'Wed, 12 Feb 2020 04:44:59 GMT',
+27 silly get     vary: 'Accept-Encoding',
+27 silly get     'cf-cache-status': 'HIT',
+27 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+27 silly get     server: 'cloudflare' } ]
+28 verbose etag https://registry.npmjs.org/node from cache
+29 verbose get saving node to /Users/quirax/.npm/registry.npmjs.org/node/.cache.json
+30 verbose correctMkdir /Users/quirax/.npm correctMkdir not in flight; initializing
+31 silly addNameTag next cb for node with tag latest
+32 silly addNamed node@13.8.0
+33 verbose addNamed "13.8.0" is a plain semver version for node
+34 silly cache afterAdd node@13.8.0
+35 verbose afterAdd /Users/quirax/.npm/node/13.8.0/package/package.json not in flight; writing
+36 verbose correctMkdir /Users/quirax/.npm correctMkdir not in flight; initializing
+37 verbose afterAdd /Users/quirax/.npm/node/13.8.0/package/package.json written
+38 silly install resolved [ { name: 'node',
+38 silly install resolved     version: '13.8.0',
+38 silly install resolved     description: 'node',
+38 silly install resolved     main: 'index.js',
+38 silly install resolved     keywords: [ 'runtime' ],
+38 silly install resolved     repository:
+38 silly install resolved      { type: 'git',
+38 silly install resolved        url: 'git+https://github.com/aredridel/node-bin-gen.git' },
+38 silly install resolved     scripts: { preinstall: 'node installArchSpecificPackage' },
+38 silly install resolved     bin: { node: 'bin/node' },
+38 silly install resolved     dependencies: { 'node-bin-setup': '^1.0.0' },
+38 silly install resolved     license: 'ISC',
+38 silly install resolved     author: '',
+38 silly install resolved     engines: { npm: '>=5.0.0' },
+38 silly install resolved     bugs: { url: 'https://github.com/aredridel/node-bin-gen/issues' },
+38 silly install resolved     homepage: 'https://github.com/aredridel/node-bin-gen#readme',
+38 silly install resolved     _id: 'node@13.8.0',
+38 silly install resolved     _nodeVersion: '13.6.0',
+38 silly install resolved     _npmVersion: '6.13.6',
+38 silly install resolved     dist:
+38 silly install resolved      { integrity: 'sha512-5lCiqlWPij8bl5bPMBbOtuhMsrhLlYm2zYmRfrEkvJl8OOjzXpc1Dej/mcd8C3wdwJ9E0VJLvqlHDMe70WUT4w==',
+38 silly install resolved        shasum: '4bcc1e9fc5b8c27088c89be38613ff10b63cea45',
+38 silly install resolved        tarball: 'https://registry.npmjs.org/node/-/node-13.8.0.tgz',
+38 silly install resolved        fileCount: 3,
+38 silly install resolved        unpackedSize: 1483,
+38 silly install resolved        'npm-signature': '-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeQOxHCRA9TVsSAnZWagAAsA4P/jxv2GQhDDVhLk1gF31j\nZoB8/V4/DJ0ag84RqeTqwH4UGlSDROQfgDaBoykLt7i0U6seBqCADfnDclpg\nAQr/21Hcy1rCKR7g1iueytDyRJ9Sqc87CadkXtwYw8ZX0x7fE3UGUmQWZyWw\nBUSuUpN9JyIs2Zegcw1gB+JWb24itvNplMKekL3r9oD23LRUCNGkL1QvmPD7\nBgSgpuAM/Ka0fNH1XYh+MaUbeINIf2qKE7VViu9F6u2JKSccZWXUulWB8XfL\n79KvLCKdgmuWchm0BCRnQ+PJK4BpFtnbRYDxs4JAr9fGN7VcwCwAgUy/e8f/\nQRbITIUJlyvSGZuBDOK9TiKfT2HpJqhnFn8fMZyHBKon5J71CNcG6zzBjt07\nnrNRt7n143ZmA8+WDDWuTJShOpUVwZ0QC39NHYiLLx1lsg2YEhNuMXHIHb/G\nSUOJkY68D1DPO5DxuwKiOvFo2m/dj8cIz0CYmvshoJNVi1Ex6CljPTfS3dGf\npVEKhtqitHD13l8HmzF/L9JVfTb/svDfmIB+4R2+pIr3oQzfwUCjJxToKhAL\nF5dmhZzxVv4/n1c1CQ4TpA45jul3xxlVw48GH7bwbk/PaQ0RvBunI/yGLbsb\nU9045KI/1z/MC94Pq8c6tA867DHCC1DcrUJABk61ooD775VDING/yk7N4x91\n1epL\r\n=BXAH\r\n-----END PGP SIGNATURE-----\r\n' },
+38 silly install resolved     maintainers: [ [Object], [Object] ],
+38 silly install resolved     _npmUser: { name: 'aredridel', email: 'aredridel@dinhe.net' },
+38 silly install resolved     directories: {},
+38 silly install resolved     _npmOperationalInternal:
+38 silly install resolved      { host: 's3://npm-registry-packages',
+38 silly install resolved        tmp: 'tmp/node_13.8.0_1581313094524_0.02446460583223753' },
+38 silly install resolved     _hasShrinkwrap: false,
+38 silly install resolved     _shasum: '4bcc1e9fc5b8c27088c89be38613ff10b63cea45',
+38 silly install resolved     _resolved: 'https://registry.npmjs.org/node/-/node-13.8.0.tgz',
+38 silly install resolved     _from: 'node@latest',
+38 silly install resolved     readme: 'ERROR: No README data found!' } ]
+39 info install node@13.8.0 into /usr/local/lib
+40 info installOne node@13.8.0
+41 verbose installOne of node to /usr/local/lib not in flight; installing
+42 verbose correctMkdir /Users/quirax/.npm/_locks correctMkdir not in flight; initializing
+43 verbose lock using /Users/quirax/.npm/_locks/node-55ba4836bfa9dc50.lock for /usr/local/lib/node_modules/node
+44 warn engine node@13.8.0: wanted: {"npm":">=5.0.0"} (current: {"node":"4.5.0","npm":"2.15.9"})
+45 silly install write writing node 13.8.0 to /usr/local/lib/node_modules/node
+46 verbose unbuild lib/node_modules/node
+47 silly gentlyRm /usr/local/lib/node_modules/node is being purged from base /usr/local
+48 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/node
+49 verbose tar unpack /Users/quirax/.npm/node/13.8.0/package.tgz
+50 verbose tar unpacking to /usr/local/lib/node_modules/node
+51 silly gentlyRm /usr/local/lib/node_modules/node is being purged
+52 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/node
+53 silly gunzTarPerm modes [ '755', '644' ]
+54 silly gunzTarPerm extractEntry installArchSpecificPackage.js
+55 silly gunzTarPerm extractEntry package.json
+56 silly gunzTarPerm extractEntry README.md
+57 verbose write writing to /usr/local/lib/node_modules/node/package.json
+58 info preinstall node@13.8.0
+59 verbose unsafe-perm in lifecycle true
+60 info node@13.8.0 Failed to exec preinstall script
+61 verbose unlock done using /Users/quirax/.npm/_locks/node-55ba4836bfa9dc50.lock for /usr/local/lib/node_modules/node
+62 verbose stack Error: node@13.8.0 preinstall: `node installArchSpecificPackage`
+62 verbose stack Exit status 1
+62 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
+62 verbose stack     at emitTwo (events.js:87:13)
+62 verbose stack     at EventEmitter.emit (events.js:172:7)
+62 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+62 verbose stack     at emitTwo (events.js:87:13)
+62 verbose stack     at ChildProcess.emit (events.js:172:7)
+62 verbose stack     at maybeClose (internal/child_process.js:829:16)
+62 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+63 verbose pkgid node@13.8.0
+64 verbose cwd /Users/quirax/Documents/P2/dev
+65 error Darwin 19.3.0
+66 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "node" "-g"
+67 error node v4.5.0
+68 error npm  v2.15.9
+69 error code ELIFECYCLE
+70 error node@13.8.0 preinstall: `node installArchSpecificPackage`
+70 error Exit status 1
+71 error Failed at the node@13.8.0 preinstall script 'node installArchSpecificPackage'.
+71 error This is most likely a problem with the node package,
+71 error not with npm itself.
+71 error Tell the author that this fails on your system:
+71 error     node installArchSpecificPackage
+71 error You can get information on how to open an issue for this project with:
+71 error     npm bugs node
+71 error Or if that isn't available, you can get their info via:
+71 error
+71 error     npm owner ls node
+71 error There is likely additional logging output above.
+72 verbose exit [ 1, true ]
+73 verbose unbuild lib/node_modules/node
+74 info preuninstall node@13.8.0
+75 info uninstall node@13.8.0
+76 verbose unbuild rmStuff node@13.8.0 from /usr/local/lib/node_modules
+77 silly gentlyRm /usr/local/bin/node is being gently removed
+78 silly gentlyRm verifying /usr/local is an npm working directory
+79 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+80 silly gentlyRm deletion target /usr/local/bin/node is under /usr/local
+81 verbose gentlyRm vacuuming from /usr/local/bin/node up to /usr/local
+82 silly vacuum-fs removing /usr/local/bin/node
+83 silly vacuum-fs quitting because other entries in /usr/local/bin
+84 info postuninstall node@13.8.0
+85 silly gentlyRm /usr/local/lib/node_modules/node is being purged from base /usr/local
+86 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/node
+87 silly vacuum-fs purging /usr/local/lib/node_modules/node
+88 silly vacuum-fs quitting because other entries in /usr/local/lib/node_modules
