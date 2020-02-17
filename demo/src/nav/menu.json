@@ -1,0 +1,12 @@
+{
+    "menu": [
+        {
+            "name": "mediacast",
+            "caption": "Media Cast"
+        },
+        {
+            "name": "ranking",
+            "caption": "Eco-Efficiency Ranking"
+        }
+    ]
+}
