@@ -1,1 +1,0 @@
-# quirax.github.io
