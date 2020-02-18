@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import menu_list from './menu.json';
+import menu_list from '../config/config.json';
 
 class Navigator extends React.Component {
     constructor() {

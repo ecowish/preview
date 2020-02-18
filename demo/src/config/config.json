@@ -1,0 +1,50 @@
+{
+    "menu": [
+        {
+            "name": "mediacast",
+            "caption": "Media Cast"
+        },
+        {
+            "name": "how-to",
+            "caption": "How-To Recycle by Products"
+        },
+        {
+            "name": "ranking",
+            "caption": "Eco-Efficiency Ranking"
+        },
+        {
+            "name": "contact",
+            "caption": "Contact Us"
+        }
+    ],
+    "contactCategory": [
+        {
+            "caption": "Media Cast",
+            "value": "mediacast",
+            "subcategory": [
+                {
+                    "caption": "Problem with Playing Video",
+                    "value": "playing"
+                }
+            ]
+        },
+        {
+            "caption": "How-To Recycle by Products",
+            "value": "htrp"
+        },
+        {
+            "caption":"Eco-Efficiency Ranking",
+            "value": "ranking",
+            "subcategory": [
+                {
+                    "caption": "Objection of Ranking Result",
+                    "value": "objection"
+                },
+                {
+                    "caption": "Request to Register Ranking Data",
+                    "value": "register"
+                }
+            ]
+        }
+    ]
+}

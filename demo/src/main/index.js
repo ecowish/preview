@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom';
 import Contact from '../contact';
 
 class Main extends React.Component {
-    render() {
-        var elem = <Contact />;
+    constructor(props) {
+        super(props);
 
+        this.state = {
+            elem: null
+        };
+    }
+    render() {
+        document.body.onload = () => {
+            var elem = <Contact />;
+            this.setState({elem: elem});
+        }
         return <main>
-            {elem}
+            {this.state.elem}
         </main>;
     }
 }
