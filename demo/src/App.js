@@ -15,7 +15,11 @@ class App extends React.Component {
             </header>,
             <Main />,
             <footer>
-                <address></address>
+                <div>
+                    <p>Eco-Ending</p>
+                    <address>77, Jeongneung-ro, Seongbuk-gu, Seoul, Republic of Korea</address>
+                    <p>(C) 2020 Eco-Ending.</p>
+                </div>
             </footer>
         ];
     }

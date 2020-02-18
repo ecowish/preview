@@ -12,7 +12,6 @@ class Navigator extends React.Component {
         var menu_elem = [];
         for (var i in menu_list.menu) {
             var item = menu_list.menu[i];
-            console.log(item);
             menu_elem.push(
                 <li>{item.caption}</li>
             );
