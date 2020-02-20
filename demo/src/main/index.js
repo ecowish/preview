@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Contact from '../contact';
+import { Routes } from '../nav/route';
 
 class Main extends React.Component {
     constructor(props) {
@@ -11,12 +10,8 @@ class Main extends React.Component {
         };
     }
     render() {
-        document.body.onload = () => {
-            var elem = <Contact />;
-            this.setState({elem: elem});
-        }
         return <main>
-            {this.state.elem}
+            <Routes />
         </main>;
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import Config from '../config/config.json';
-import Markdown from 'react-markdown';
+import { Markdown } from '../md';
 import privacyContact from '../md/privacy.contact.md';
 
 class Contact extends React.Component {

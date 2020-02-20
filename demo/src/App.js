@@ -1,19 +1,22 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
 import logo from './logo.svg';
 import './App.css';
 import './App.test.css';
+
 import Navigator from './nav';
-import Search from './search';
+import Search from './search/header';
 import Main from './main';
 
 class App extends React.Component {
     render() {
-        return [
+        return <BrowserRouter>
             <header>
                 <Navigator />
                 <Search />
-            </header>,
-            <Main />,
+            </header>
+            <Main />
             <footer>
                 <div>
                     <p>Eco-Ending</p>
@@ -21,7 +24,7 @@ class App extends React.Component {
                     <p>(C) 2020 Eco-Ending.</p>
                 </div>
             </footer>
-        ];
+        </BrowserRouter>;
     }
 }
 

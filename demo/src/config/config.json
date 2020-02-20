@@ -1,22 +1,4 @@
 {
-    "menu": [
-        {
-            "name": "mediacast",
-            "caption": "Media Cast"
-        },
-        {
-            "name": "how-to",
-            "caption": "How-To Recycle by Products"
-        },
-        {
-            "name": "ranking",
-            "caption": "Eco-Efficiency Ranking"
-        },
-        {
-            "name": "contact",
-            "caption": "Contact Us"
-        }
-    ],
     "contactCategory": [
         {
             "caption": "Media Cast",
