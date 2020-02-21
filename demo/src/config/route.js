@@ -1,5 +1,6 @@
 import Search from '../search';
 import Contact from '../contact';
+import Mediacast from '../mediacast';
 
 import StaticPage from '../md/index';
 import Privacy from '../md/privacy.md';
@@ -14,7 +15,8 @@ export default [
     },
     {
         path: "/mediacast",
-        caption: "Media Cast"
+        caption: "Media Cast",
+        component: Mediacast
     },
     {
         path: "/how-to",
