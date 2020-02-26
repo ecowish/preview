@@ -1,6 +1,8 @@
 import Search from '../search';
 import Contact from '../contact';
-import Mediacast from '../mediacast';
+import Howto from '../howto';
+import MainPage from '../main/main';
+import Ranking from '../ranking';
 
 import StaticPage from '../md/index';
 import Privacy from '../md/privacy.md';
@@ -8,32 +10,29 @@ import Privacy from '../md/privacy.md';
 export default [
     {
         path: "/",
-        component: Search,
+        component: MainPage,
         exact: true,
         hide: true,
-        caption: "Home"
-    },
-    {
-        path: "/mediacast",
-        caption: "Media Cast",
-        component: Mediacast
+        caption: "홈"
     },
     {
         path: "/how-to",
-        caption: "How-To Recycle by Products"
+        caption: "슬기로운 분리수거",
+        component: Howto
     },
     {
         path: "/ranking",
-        caption: "Eco-Efficiency Ranking"
+        caption: "편리한 에코 분야별 순위",
+        component: Ranking
     },
     {
         path: "/contact",
-        caption: "Contact Us",
+        caption: "문의하기",
         component: Contact
     },
     {
         path: "/privacy",
-        caption: "Privacy Policy",
+        caption: "개인정보보호정책",
         component: StaticPage,
         params: {
             md: Privacy

@@ -15,11 +15,16 @@
     --menu-radius: 5px;
     --menu-border: #ccc;
     --menu-background: white;
+
+    --main-padding: 10px;
+
+    --computed-header-height: calc(var(--header-height) + var(--menu-padding) + var(--header-padding) + 1px);
 }
 
 html, body {
     margin: 0;
     padding: 0;
+    max-width: unset;
 }
 
 header {
@@ -44,7 +49,7 @@ header > nav > #menu {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: calc(var(--header-height) + var(--menu-padding) + var(--header-padding) + 1px);
+    top: var(--computed-header-height);
     left: 0;
     display: none;
     width: var(--menu-width);
@@ -73,8 +78,8 @@ header > #search {
 }
 
 main {
-    margin-top: calc(var(--header-height) + var(--header-padding) * 2 + 1px);
-    padding: 10px;
+    margin-top: var(--computed-header-height);
+    padding: var(--main-padding);
 }
 
 footer {
@@ -100,4 +105,31 @@ button.span {
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+input:not([type=checkbox]):not([type=radio]), select {
+    display: inline-block;
+}
+
+.ranking_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:0;
+    padding: 0;
+    flex: 1;
+}
+
+.ranking_wrap li {
+    list-style-type: none;
+    width: var(--ranking-item-width);
+    max-width: var(--ranking-item-max-width);
+}
+
+.ranking_wrap li img {
+    width: 100%;
+    padding-top: 100%;
+    background: var(--ranking-item-image-background);
+    border: none;
+    border-radius: 100%;
 }
