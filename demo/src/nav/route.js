@@ -14,7 +14,7 @@ const Links = (Elem) => {
 const Routes = () => {
     return router.map((item) => {
         if(!item.path || !item.component) return null;
-        return <Route path={item.path} exact={item.exact}>
+        return <Route path={item.path} exact={item.exact || false}>
             <item.component params={item.params}/>
         </Route>;
     })

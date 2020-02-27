@@ -26,21 +26,27 @@ class MainPage extends React.Component {
                     <button class="ranking_prevbtn"><i class="material-icons">chevron_left</i></button>
                     <ul class="ranking_wrap">
                         <li>
+                            <div class="ranking_image">
                             <img alt="" />
+                            </div>
                             <div class="ranking_description">
                                 <h3>1위</h3>
                                 <p>이분이고요</p>
                             </div>
                         </li>
                         <li>
+                        <div class="ranking_image">
                             <img alt="" />
+                            </div>
                             <div class="ranking_description">
                                 <h3>2위</h3>
                                 <p>이분이고요</p>
                             </div>
                         </li>
                         <li>
+                        <div class="ranking_image">
                             <img alt="" />
+                            </div>
                             <div class="ranking_description">
                                 <h3>3위</h3>
                                 <p>이분이고요</p>

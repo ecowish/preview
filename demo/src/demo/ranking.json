@@ -1,0 +1,65 @@
+{
+    "water": {
+        "caption": "생수",
+        "ranking": [
+            {
+                "image": "https://company.lottechilsung.co.kr/common/images/mainCon_two_tab8_img1.png",
+                "name": "아이시스"
+            },
+            {
+                "image": "https://company.lottechilsung.co.kr/common/images/mainCon_two_tab8_img1.png",
+                "name": "풀무원샘물"
+            },
+            {
+                "image": "https://company.lottechilsung.co.kr/common/images/mainCon_two_tab8_img1.png",
+                "name": "제주 삼다수"
+            },
+            {
+                "image": "https://company.lottechilsung.co.kr/common/images/mainCon_two_tab8_img1.png",
+                "name": "스파클"
+            }
+        ]
+    },
+    "drink": {
+        "caption": "음료수",
+        "ranking": [
+            {
+                "image": "https://cdn.imweb.me/thumbnail/20181205/5c0780175c74f.png",
+                "name": "코카콜라"
+            },
+            {
+                "image": "https://cdn.imweb.me/thumbnail/20181205/5c0780175c74f.png",
+                "name": "펩시"
+            },
+            {
+                "image": "https://cdn.imweb.me/thumbnail/20181205/5c0780175c74f.png",
+                "name": "롯데 칠성사이다"
+            }
+        ]
+    },
+    "cafe": {
+        "caption": "커피숍",
+        "ranking": [
+            {
+                "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F201AE44A4D75E3BE35",
+                "name": "스타벅스"
+            },
+            {
+                "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F201AE44A4D75E3BE35",
+                "name": "커피빈"
+            },
+            {
+                "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F201AE44A4D75E3BE35",
+                "name": "할리스커피"
+            },
+            {
+                "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F201AE44A4D75E3BE35",
+                "name": "카페베네"
+            },
+            {
+                "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F201AE44A4D75E3BE35",
+                "name": "이디야커피"
+            }
+        ]
+    }
+}

@@ -21,9 +21,14 @@ export default [
         component: Howto
     },
     {
+        path: "/ranking/:category",
+        component: Ranking
+    },
+    {
         path: "/ranking",
         caption: "편리한 에코 분야별 순위",
-        component: Ranking
+        component: Ranking,
+        exact: true
     },
     {
         path: "/contact",
