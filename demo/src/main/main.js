@@ -1,6 +1,9 @@
 import React from 'react';
 import $ from 'jquery';
 import './main.css';
+import { renderRanking } from '../ranking';
+
+import demoRanking from '../demo/ranking.json';
 
 class MainPage extends React.Component {
     resize() {
@@ -11,6 +14,7 @@ class MainPage extends React.Component {
     render() {
         $(this.resize);
         $(window).resize(this.resize).on("orientationchange", this.resize);
+
         return <section>
             <div id="search_area">
                 <h1>찾으시는 것이 있으신가요?</h1>
@@ -24,35 +28,9 @@ class MainPage extends React.Component {
                 <h2>생수 부문</h2>
                 <div class="ranking_slide">
                     <button class="ranking_prevbtn"><i class="material-icons">chevron_left</i></button>
-                    <ul class="ranking_wrap">
-                        <li>
-                            <div class="ranking_image">
-                            <img alt="" />
-                            </div>
-                            <div class="ranking_description">
-                                <h3>1위</h3>
-                                <p>이분이고요</p>
-                            </div>
-                        </li>
-                        <li>
-                        <div class="ranking_image">
-                            <img alt="" />
-                            </div>
-                            <div class="ranking_description">
-                                <h3>2위</h3>
-                                <p>이분이고요</p>
-                            </div>
-                        </li>
-                        <li>
-                        <div class="ranking_image">
-                            <img alt="" />
-                            </div>
-                            <div class="ranking_description">
-                                <h3>3위</h3>
-                                <p>이분이고요</p>
-                            </div>
-                        </li>
-                    </ul>
+                    {
+                        renderRanking(demoRanking.water.ranking.slice(0, 3), true)
+                    }
                     <button class="ranking_nextbtn"><i class="material-icons">chevron_right</i></button>
                 </div>
             </div>

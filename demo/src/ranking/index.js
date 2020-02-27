@@ -8,6 +8,31 @@ import './ranking.css';
 
 import demoRanking from '../demo/ranking.json';
 
+export function renderRanking(ranking, category, firstOnTop) {
+    var rank = 1;
+
+    return <ul class={"ranking_wrap" + ((firstOnTop)?" firstOnTop":"")}>
+            {
+                ranking.map((item) => {
+                    var obj = (category)?item:item.ranking[0];
+                    return <li>
+                        <div class="ranking_item">
+                        <div class="ranking_image">
+                            <img src={obj.image} alt="" />
+                        </div>
+                        <div class="ranking_description">
+                            <Link to={(category)?"#":"/ranking/"+item.path}>
+                                <h3>{(category)?(rank++)+"위":item.caption+" 분야"}</h3>
+                                <p>{obj.name}</p>
+                            </Link>
+                        </div>
+                        </div>
+                    </li>
+                })
+            }
+        </ul>;
+}
+
 class Ranking extends React.Component {
     static propTypes = {
         match: PropTypes.object.isRequired,
@@ -16,30 +41,6 @@ class Ranking extends React.Component {
     };
     constructor(props) {
         super(props);
-    }
-    renderRanking(ranking, category, firstOnTop) {
-        var rank = 1;
-
-        return <ul class={"ranking_wrap" + ((firstOnTop)?" firstOnTop":"")}>
-                {
-                    ranking.map((item) => {
-                        var obj = (category)?item:item.ranking[0];
-                        return <li>
-                            <div class="ranking_item">
-                            <div class="ranking_image">
-                                <img src={obj.image} alt="" />
-                            </div>
-                            <div class="ranking_description">
-                                <Link to={(category)?"#":"/ranking/"+item.path}>
-                                    <h3>{(category)?(rank++)+"위":item.caption+" 분야"}</h3>
-                                    <p>{obj.name}</p>
-                                </Link>
-                            </div>
-                            </div>
-                        </li>
-                    })
-                }
-            </ul>;
     }
     render() {
         var category = null, ranking_orig = [];
@@ -58,7 +59,7 @@ class Ranking extends React.Component {
             <h1>편리한 에코 분야별 순위</h1>
             <h2>{(category)?demoRanking[category].caption + " 분야":"분야별 1위"}</h2>
             {
-                this.renderRanking(ranking_orig, category, category)
+                renderRanking(ranking_orig, category, category)
             }
         </section>;
     }

@@ -36,20 +36,6 @@
     background: unset;
 }
 
-#ranking_area .ranking_wrap li {
-    list-style-type: none;
-    width: var(--ranking-item-width);
-    max-width: var(--ranking-item-max-width);
-}
-
-#ranking_area .ranking_wrap li img {
-    width: 100%;
-    padding-top: 100%;
-    background: var(--ranking-item-image-background);
-    border: none;
-    border-radius: 100%;
-}
-
 #youtube_area {
     display: flex;
     flex-direction: row;
