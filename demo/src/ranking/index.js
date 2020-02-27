@@ -17,29 +17,15 @@ class Ranking extends React.Component {
     constructor(props) {
         super(props);
     }
-    renderRanking(ranking_array, category, firstOnTop) {
-        var ranking = [];
-        var chunk = [], i = (firstOnTop)?-1:0;
-        for(var item in ranking_array) {
-            i++;
-            ranking_array[item].path = item;
-            chunk.push(ranking_array[item]);
-            if(i % 3 == 0) {
-                ranking.push(chunk);
-                chunk = [];
-            }
-        }
-        if(i % 3 > 0) ranking.push(chunk);
-
+    renderRanking(ranking, category, firstOnTop) {
         var rank = 1;
 
-        return ranking.map((chunk) => (
-            <ul class="ranking_wrap">
+        return <ul class={"ranking_wrap" + ((firstOnTop)?" firstOnTop":"")}>
                 {
-                    chunk.map((item) => {
+                    ranking.map((item) => {
                         var obj = (category)?item:item.ranking[0];
-                        console.log(item);
                         return <li>
+                            <div class="ranking_item">
                             <div class="ranking_image">
                                 <img src={obj.image} alt="" />
                             </div>
@@ -49,17 +35,23 @@ class Ranking extends React.Component {
                                     <p>{obj.name}</p>
                                 </Link>
                             </div>
+                            </div>
                         </li>
                     })
                 }
-            </ul>
-        ));
+            </ul>;
     }
     render() {
-        var category = null, ranking_orig = demoRanking;
+        var category = null, ranking_orig = [];
         if (this.props.match && this.props.match.params.category) {
             category = this.props.match.params.category;
             ranking_orig = demoRanking[category].ranking;
+        } else {
+            for(var cat in demoRanking) {
+                var item = demoRanking[cat];
+                item.path = cat;
+                ranking_orig.push(item);
+            }
         }
         
         return <section>

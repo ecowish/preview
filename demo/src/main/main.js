@@ -14,7 +14,7 @@ class MainPage extends React.Component {
         return <section>
             <div id="search_area">
                 <h1>찾으시는 것이 있으신가요?</h1>
-                <form class="find_dowmain_form">
+                <form class="search_form">
                     <input type="text" placeholder="재활용 방법을 검색해보세요" />
                     <button type="submit">검색</button>
                 </form>

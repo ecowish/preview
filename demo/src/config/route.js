@@ -16,9 +16,14 @@ export default [
         caption: "홈"
     },
     {
-        path: "/how-to",
-        caption: "슬기로운 분리수거",
+        path: "/howto/:howtoId",
         component: Howto
+    },
+    {
+        path: "/howto",
+        caption: "슬기로운 분리수거",
+        component: Howto,
+        exact: true
     },
     {
         path: "/ranking/:category",

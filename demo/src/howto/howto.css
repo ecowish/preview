@@ -1,0 +1,88 @@
+:root {
+    --howto-list-item-margin: 5px;
+
+    --howto-recycle-margin-bottom: 10px;
+    --howto-recycle-image-margin: 10px;
+    --howto-recycle-image-size: 100px;
+    --howto-recycle-image-background: #8ee8a0;
+}
+
+:root {
+    --howto-list-item-per-row: 4;
+}
+
+#howto_area .howto_recycle > ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#howto_area .howto_recycle > ol li {
+    display: flex;
+    margin-bottom: var(--howto-recycle-margin-bottom);
+    align-items: center;
+}
+
+#howto_area .howto_recycle > ol li:last-child {
+    margin-bottom: 0;
+}
+
+#howto_area .howto_recycle > ol li .howto_recycle_image {
+    height: var(--howto-recycle-image-size);
+    width: var(--howto-recycle-image-size);
+    background: var(--howto-recycle-image-background);
+    border-radius: var(--howto-recycle-image-size);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-right: var(--howto-recycle-image-margin);
+}
+
+#howto_area .howto_recycle > ol li .howto_recycle_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#howto_map {
+    height: 70vh;
+}
+
+#howto_list_area {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#howto_list_area article {
+    flex: 1 0;
+    flex-basis: calc((100% / var(--howto-list-item-per-row)) - (var(--howto-list-item-margin) * 2));
+    margin: var(--howto-list-item-margin);
+    display: flex;
+    flex-direction: column;
+}
+
+#howto_list_area article .howto_list_image img {
+    width: 100%;
+}
+
+#howto_list_nav {
+    display: flex;
+    justify-content: center;
+}
+
+#howto_list_nav button {
+    height: 2em;
+    width: 2em;
+    padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    #howto_list_area {
+        flex-direction: column;
+    }
+    
+    #howto_list_area article {
+        flex-direction: row;
+    }
+}

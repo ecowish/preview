@@ -2,10 +2,6 @@
     --search-area-margin: calc(0px - var(--main-padding));
     --search-area-height: calc(100vh - var(--computed-header-height));
     --search-area-background: #8ee8a0;
-    
-    --ranking-item-width: 30%;
-    --ranking-item-max-width: 30vh;
-    --ranking-item-image-background: #8ee8a0;
 }
 
 #search_area {
