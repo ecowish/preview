@@ -1,0 +1,56 @@
+:root {
+    --contact-form-div-margin: 5px;
+}
+
+#contact_form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#contact_form > div {
+    flex: 1 0;
+    flex-basis: calc(50% - (var(--contact-form-div-margin) * 2));
+    margin: var(--contact-form-div-margin);
+}
+
+#contact_form_content textarea {
+    width: 100%;
+    margin: 0;
+}
+
+#contact_form_content input {
+    width: calc(100% - 20px);
+    margin: 0;
+}
+
+#contact_form_content select {
+    width: 100%;
+}
+
+#contact_form_content th {
+    border-bottom: none;
+    width: 10ch;
+    white-space: nowrap;
+}
+
+#contact_form_content td {
+    width: 50%;
+}
+
+#contact_form_content tr:nth-child(2n) input, #contact_form_content tr:nth-child(2n) select, #contact_form_content tr:nth-child(2n) textarea {
+    background: white;
+}
+
+#contact_form_content #content {
+    height: 10em;
+}
+
+@media only screen and (max-width: 768px) {
+    #contact_form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

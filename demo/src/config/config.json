@@ -1,32 +1,36 @@
 {
     "contactCategory": [
         {
-            "caption": "Media Cast",
-            "value": "mediacast",
+            "caption": "슬기로운 분리수거",
+            "value": "howto",
             "subcategory": [
                 {
-                    "caption": "Problem with Playing Video",
+                    "caption": "영상 재생 문제",
                     "value": "playing"
+                },
+                {
+                    "caption": "지도 표시 문제",
+                    "value": "mapview"
                 }
             ]
         },
         {
-            "caption": "How-To Recycle by Products",
-            "value": "htrp"
-        },
-        {
-            "caption":"Eco-Efficiency Ranking",
+            "caption":"편리한 에코 분야별 순위",
             "value": "ranking",
             "subcategory": [
                 {
-                    "caption": "Objection of Ranking Result",
+                    "caption": "순위 내용 이의제기",
                     "value": "objection"
                 },
                 {
-                    "caption": "Request to Register Ranking Data",
+                    "caption": "순위에 등록 및 반영 요청",
                     "value": "register"
                 }
             ]
+        },
+        {
+            "caption": "협업 및 콜라보레이션",
+            "value": "collaboration"
         }
     ]
 }

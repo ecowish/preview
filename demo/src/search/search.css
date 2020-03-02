@@ -1,0 +1,47 @@
+:root {
+    --search-result-div-margin: 5px;
+    --search-image-width: 100px;
+    
+    --ranking-search-image-background: #8ee8a0;
+}
+
+ul.search_result {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.search_result li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul.search_result li > div {
+    margin: var(--search-result-div-margin);
+}
+
+ul.search_result li .search_image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    width: var(--search-image-width);
+}
+
+ul.search_result li .search_image img {
+    width: 100%;
+}
+
+#search_ranking ul.search_result li .search_image {
+    background: var(--ranking-search-image-background);
+    border-radius: var(--search-image-width);
+}
+
+.search_more {
+    text-align: right;
+}
+
+.search_more .material-icons {
+    font-size: 1em;
+}

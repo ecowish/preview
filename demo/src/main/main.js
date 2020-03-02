@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import './main.css';
 import { renderRanking } from '../ranking';
+import { Link } from 'react-router-dom';
 
 import demoRanking from '../demo/ranking.json';
 
@@ -20,7 +21,7 @@ class MainPage extends React.Component {
                 <h1>찾으시는 것이 있으신가요?</h1>
                 <form class="search_form">
                     <input type="text" placeholder="재활용 방법을 검색해보세요" />
-                    <button type="submit">검색</button>
+                    <Link to="/search/a"><button>검색</button></Link>
                 </form>
             </div>
             <div id="ranking_area">

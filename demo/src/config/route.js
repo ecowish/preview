@@ -47,5 +47,14 @@ export default [
         params: {
             md: Privacy
         }
+    },
+    {
+        path: "/search/:keyword",
+        component: Search
+    },
+    {
+        path: "/search",
+        component: MainPage,
+        exact: true
     }
 ];
