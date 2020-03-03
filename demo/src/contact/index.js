@@ -51,7 +51,7 @@ class Contact extends React.Component {
 
         await doc.loadInfo(); // loads document properties and worksheets
         const sheet = doc.sheetsByIndex[0];
-        await sheet.addRow({ category: category, subcategory: subcategory, email: $("#email").val(), content: $("#content").val() });
+        await sheet.addRow({ datetime: new Date().toLocaleString(), category: category, subcategory: subcategory, email: $("#email").val(), content: $("#content").val() });
 
         alert("전달되었습니다.");
 
