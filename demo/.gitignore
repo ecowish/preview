@@ -11,6 +11,9 @@
 # production
 /build
 
+# privacy
+/src/credential
+
 # misc
 .DS_Store
 .env.local
