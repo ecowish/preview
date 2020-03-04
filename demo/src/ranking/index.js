@@ -17,8 +17,10 @@ export function renderRanking(ranking, category, firstOnTop) {
                     var obj = (category)?item:item.ranking[0];
                     return <li>
                         <div class="ranking_item">
-                        <div class="ranking_image">
-                            <img src={obj.image} alt="" />
+                        <div class="ranking_image_wrap">
+                            <div class="ranking_image">
+                                <img src={obj.image} alt="" />
+                            </div>
                         </div>
                         <div class="ranking_description">
                             <Link to={(category)?"#":"/ranking/"+item.path}>

@@ -37,28 +37,36 @@
             }
         ]
     },
-    "cafe": {
-        "caption": "커피숍",
+    "trashbin": {
+        "caption": "쓰레기통 데이터셋",
         "ranking": [
             {
-                "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F201AE44A4D75E3BE35",
-                "name": "스타벅스"
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 도봉구, 양천구"
             },
             {
-                "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F201AE44A4D75E3BE35",
-                "name": "커피빈"
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 강북, 동대문, 동작, 서대문, 성동, 은평"
             },
             {
-                "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F201AE44A4D75E3BE35",
-                "name": "할리스커피"
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 관악구"
             },
             {
-                "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F201AE44A4D75E3BE35",
-                "name": "카페베네"
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 중랑구"
             },
             {
-                "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F201AE44A4D75E3BE35",
-                "name": "이디야커피"
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 강남구, 송파구"
+            },
+            {
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 광진구"
+            },
+            {
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 영등포구"
             }
         ]
     }
