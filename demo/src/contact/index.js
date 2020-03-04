@@ -4,6 +4,8 @@ import { Markdown } from '../md';
 import privacyContact from '../md/privacy.contact.md';
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import $ from 'jquery';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './contact.css';
 
@@ -12,11 +14,18 @@ import creds from '../credential/google.sheets.json';
 class Contact extends React.Component {
     sheet_id = "1TSzzcLO6PfS5-Va5SyNkEL5u0BllIxF3LzGe4JHmvAI";
 
+    static propTypes = {
+        match: PropTypes.object.isRequired,
+        location: PropTypes.object.isRequired,
+        history: PropTypes.object.isRequired
+    };
+
     constructor(props) {
         super(props);
 
         this.state = {
             category_idx: -1,
+            subcategory_idx: -1,
             privacyContact_content: ""
         };
 
@@ -34,6 +43,19 @@ class Contact extends React.Component {
             }, (error) => {
                 console.error(error);
             });
+        
+        if (this.props.match && this.props.match.params.category) {
+            var category_idx = Config.contactCategory.findIndex((elem) => elem.value == this.props.match.params.category);
+            this.category_elem.current.selectedIndex = category_idx + 1;
+            this.onCategoryChanged({target: this.category_elem.current});
+
+            if(category_idx > -1 && this.props.match.params.subcategory) {
+                console.log(this.props.match.params.subcategory, Config.contactCategory[category_idx].subcategory.findIndex((elem) => elem.value == this.props.match.params.subcategory) + 1)
+                this.setState({
+                    subcategory_idx: Config.contactCategory[category_idx].subcategory.findIndex((elem) => elem.value == this.props.match.params.subcategory) + 1
+                });
+            }
+        }
     }
 
     async onSubmit() {
@@ -62,13 +84,17 @@ class Contact extends React.Component {
 
     onCategoryChanged(event) {
         this.setState({
-            category_idx: event.target.selectedIndex - 1
+            category_idx: event.target.selectedIndex - 1,
+            subcategory_idx: 0
         });
 
         var subcategory_elem = this.subcategory_elem.current;
         var currentContactCategory = Config.contactCategory[event.target.selectedIndex - 1];
         subcategory_elem.disabled = !(currentContactCategory && currentContactCategory.subcategory && currentContactCategory.subcategory.length);
-        subcategory_elem.selectedIndex = 0;
+    }
+
+    componentDidUpdate() {
+        this.subcategory_elem.current.selectedIndex = this.state.subcategory_idx;
     }
 
     render() {
@@ -125,4 +151,4 @@ class Contact extends React.Component {
     }
 }
 
-export default Contact;
+export default withRouter(Contact);

@@ -105,6 +105,10 @@ button.span {
     font-size: inherit;
 }
 
+input:not([type=checkbox]):not([type=radio]), select {
+    display: inline-block;
+}
+
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -114,8 +118,10 @@ button.span {
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
 
-input:not([type=checkbox]):not([type=radio]), select {
-    display: inline-block;
+.material-icons.inline {
+    font-size: 1em;
+    vertical-align: top;
+    line-height: 1.2;
 }
 
 .ranking_wrap {

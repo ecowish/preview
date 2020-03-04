@@ -30,7 +30,17 @@
         },
         {
             "caption": "협업 및 콜라보레이션",
-            "value": "collaboration"
+            "value": "collaboration",
+            "subcategory": [
+                {
+                    "caption": "협업 제의",
+                    "value": "cowork"
+                },
+                {
+                    "caption": "기여자 등록 신청",
+                    "value": "contributor"
+                }
+            ]
         }
     ]
 }

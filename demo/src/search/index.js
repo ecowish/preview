@@ -41,7 +41,7 @@ class Search extends React.Component {
                         })()
                     }
                 </ul>
-                <p class="search_more">더보기 <i class="material-icons">chevron_right</i></p>
+                <p class="search_more">더보기 <i class="material-icons inline">chevron_right</i></p>
                 <p class="search_result">검색 결과가 없습니다.</p>
             </div>
             <div id="search_ranking">
@@ -55,7 +55,7 @@ class Search extends React.Component {
                         })()
                     }
                 </ul>
-                <p class="search_more">더보기 <i class="material-icons">chevron_right</i></p>
+                <p class="search_more">더보기 <i class="material-icons inline">chevron_right</i></p>
                 <p class="search_result">검색 결과가 없습니다.</p>
             </div>
         </section>

@@ -36,9 +36,19 @@ export default [
         exact: true
     },
     {
+        path: "/contact/:category/:subcategory",
+        component: Contact
+    },
+    {
+        path: "/contact/:category",
+        component: Contact,
+        exact: true
+    },
+    {
         path: "/contact",
         caption: "문의하기",
-        component: Contact
+        component: Contact,
+        exact: true
     },
     {
         path: "/privacy",
