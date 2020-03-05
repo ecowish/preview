@@ -2,7 +2,7 @@
     --search-area-margin: calc(0px - var(--main-padding));
     --search-area-margin-bottom: 10px;
     --search-area-height: calc(100vh - var(--computed-header-height));
-    --search-area-background: #8ee8a0;
+    --search-area-background: grey;
 }
 
 #search_area {

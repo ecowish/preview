@@ -145,7 +145,7 @@ class Contact extends React.Component {
                     <Markdown source={this.state.privacyContact_content} />
                     <p><input type="checkbox" id="agreePrivacy" required /><label for="agreePrivacy">위 내용에 동의합니다.</label></p>
                 </div>
-                <p style={{ textAlign: "right" }}><button type="submit">Submit</button></p>
+                <p style={{ textAlign: "right" }}><button type="submit" class="default">Submit</button></p>
             </form>
             </section>;
     }

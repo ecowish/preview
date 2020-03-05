@@ -21,7 +21,7 @@ class MainPage extends React.Component {
                 <h1>찾으시는 것이 있으신가요?</h1>
                 <form class="search_form">
                     <input id="query" name="query" type="text" placeholder="재활용 방법을 검색해보세요" />
-                    <Link to="/search/a"><button><i class="material-icons inline">search</i></button></Link>
+                    <Link to="/howto/a"><button class="default"><i class="material-icons inline">search</i></button></Link>
                 </form>
             </div>
             <div id="ranking_area">

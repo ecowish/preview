@@ -5,7 +5,7 @@ class Search extends React.Component {
     render() {
         return <form class="search_form" id="search">
             <input type="text" id="query" name="query" placeholder="검색" />
-            <Link to="/search/a"><button><i class="material-icons inline">search</i></button></Link>
+            <Link to="/search/a"><button class="default"><i class="material-icons inline">search</i></button></Link>
         </form>;
     }
 }

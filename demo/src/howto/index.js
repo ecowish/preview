@@ -99,7 +99,7 @@ class Howto extends React.Component {
             }
             <form id="howto_list_search" class="search_form">
                 <input type="text" placeholder="재활용 방법을 검색해보세요" />
-                <button><i class="material-icons inline">search</i></button>
+                <Link to="/howto/a"><button class="default"><i class="material-icons inline">search</i></button></Link>
             </form>
             <div id="howto_list_area">
                 {this.state.playlist.map((item) => {
@@ -113,7 +113,7 @@ class Howto extends React.Component {
             </div>
             <div id="howto_list_nav">
                 <button><i class="material-icons inline">chevron_left</i></button>
-                <button>1</button>
+                <button class="default">1</button>
                 <button>2</button>
                 <button>3</button>
                 <button>4</button>

@@ -1,9 +1,13 @@
 :root {
-    --h1-border-bottom: 1px solid black;
+    --heading-color: inherit;
+    --h1-border-bottom: 1px solid #00b22d;
+
+    --default-button-background: #00b22d;
+    --default-button-color: white;
 
     --header-height: 36px;
     --header-padding: 5px;
-    --header-border-color: #ccc;
+    --header-border-color: grey;
     --header-background: white;
 
     --footer-min-height: 90px;
@@ -15,16 +19,28 @@
     --menu-width: 200px;
     --menu-padding: 5px;
     --menu-radius: 5px;
-    --menu-border: #ccc;
+    --menu-border: grey;
     --menu-background: white;
+    --menu-color: inherit;
 
     --main-padding: 10px;
     
     --ranking-item-width: 30%;
     --ranking-item-max-width: 30vh;
-    --ranking-item-image-background: #8ee8a0;
+    --ranking-item-image-background: #00b22d;
     --ranking-item-per-row: 3;
     --ranking-item-margin: 5px;
+
+    --contribute-banner-background: #efefef;
+    --contribute-banner-padding: 10px;
+    --contribute-banner-margin: 10px 0;
+
+    --youtube-area-background: #efefef;
+    --youtube-area-padding: 10px;
+    --youtube-area-margin-bottom: 10px;
+    --youtube-area-div-padding: 10px;
+    --youtube-area-div-width: 40%;
+    --youtube-area-div-background: #efefef;
 
     --computed-header-height: calc(var(--header-height) + var(--menu-padding) + var(--header-padding) + 1px);
 }
@@ -38,6 +54,7 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
+    color: var(--heading-color);
 }
 
 h1 {
@@ -72,7 +89,6 @@ header > nav > #menu {
     left: 0;
     display: none;
     width: var(--menu-width);
-    /* padding: var(--menu-padding); */
     border-radius: var(--menu-radius);
     border: 1px solid var(--menu-border);
     background-color: var(--menu-background);
@@ -81,7 +97,10 @@ header > nav > #menu {
 header > nav > #menu > li {
     padding: var(--menu-padding);
     border-bottom: 1px solid var(--menu-border);
-    /* background-color: var(--menu-background); */
+}
+
+header > nav > #menu > li a {
+    color: var(--menu-color);
 }
 
 header > nav > #menu > li:last-child {
@@ -121,6 +140,11 @@ button.span {
 button.span.material-icons {
     font-size: 24px;
     margin-bottom: 0;
+}
+
+button.default {
+    background: var(--default-button-background);
+    color: var(--default-button-color);
 }
 
 input:not([type=checkbox]):not([type=radio]), select {
@@ -213,9 +237,9 @@ input:not([type=checkbox]):not([type=radio]), select {
 }
 
 .contribute_banner {
-    padding: 10px;
-    margin: 10px 0;
-    background: #8ee8a0;
+    padding: var(--contribute-banner-padding);
+    margin: var(--contribute-banner-margin);
+    background: var(--contribute-banner-background);
     text-align: center;
 }
 
@@ -228,22 +252,15 @@ input:not([type=checkbox]):not([type=radio]), select {
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    padding: 10px;
-    background: #8ee8a0;
-    margin-bottom: 10px;
+    padding: var(--youtube-area-padding);
+    background: var(--youtube-area-background);
+    margin-bottom: var(--youtube-area-margin-bottom);
 }
 
 #youtube_area > div {
-    width: calc(40% - 20px);
-    padding: 10px;
-}
-
-#youtube_area .youtube_description {
-    background: white;
-}
-
-#youtube_area .youtube_video {
-    background: white;
+    width: calc(var(--youtube-area-div-width) - (var(--youtube-area-div-padding) * 2));
+    padding: var(--youtube-area-div-padding);
+    background: var(--youtube-area-div-background);
 }
 
 #youtube_area .youtube_video iframe {
@@ -251,12 +268,12 @@ input:not([type=checkbox]):not([type=radio]), select {
 }
 
 @media only screen and (max-width: 768px) {
+    :root {
+        --youtube-area-div-width: 100%;
+    }
+
     #youtube_area {
         display: flex;
         flex-direction: column-reverse;
-    }
-    
-    #youtube_area > div {
-        width: calc(100% - 20px);
     }
 }
