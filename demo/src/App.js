@@ -11,7 +11,7 @@ import Main from './main';
 
 class App extends React.Component {
     render() {
-        return <BrowserRouter>
+        return <BrowserRouter basename={process.env.PUBLIC_URL}>
             <header>
                 <Navigator />
                 <Search />
@@ -19,9 +19,9 @@ class App extends React.Component {
             <Main />
             <footer>
                 <div>
-                    <p>Eco-Ending</p>
+                    <p>ECOWISH</p>
                     <address>77, Jeongneung-ro, Seongbuk-gu, Seoul, Republic of Korea</address>
-                    <p>(C) 2020 Eco-Ending.</p>
+                    <p>(C) 2020 ECOWISH.</p>
                 </div>
             </footer>
         </BrowserRouter>;
