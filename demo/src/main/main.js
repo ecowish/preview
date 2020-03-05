@@ -20,8 +20,8 @@ class MainPage extends React.Component {
             <div id="search_area">
                 <h1>찾으시는 것이 있으신가요?</h1>
                 <form class="search_form">
-                    <input type="text" placeholder="재활용 방법을 검색해보세요" />
-                    <Link to="/search/a"><button>검색</button></Link>
+                    <input id="query" name="query" type="text" placeholder="재활용 방법을 검색해보세요" />
+                    <Link to="/search/a"><button><i class="material-icons inline">search</i></button></Link>
                 </form>
             </div>
             <div id="ranking_area">
@@ -37,7 +37,7 @@ class MainPage extends React.Component {
             </div>
             <div id="youtube_area">
                 <div class="youtube_description">
-                    <h3>어떤 말을 쓰면 좋을까?</h3>
+                    <h1>어떤 말을 쓰면 좋을까?</h1>
                     <p>그러게 말입니다.</p>
                 </div>
                 <div class="youtube_video">

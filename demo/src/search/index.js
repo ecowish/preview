@@ -30,6 +30,7 @@ class Search extends React.Component {
         )
         return <section>
             <h1>{this.props.match.params.keyword} 검색결과</h1>
+            <div id="search_wrap">
             <div id="search_howto">
                 <h2>슬기로운 분리수거</h2>
                 <ul class="search_result">
@@ -57,6 +58,7 @@ class Search extends React.Component {
                 </ul>
                 <p class="search_more">더보기 <i class="material-icons inline">chevron_right</i></p>
                 <p class="search_result">검색 결과가 없습니다.</p>
+            </div>
             </div>
         </section>
     }

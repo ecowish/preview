@@ -1,4 +1,6 @@
 :root {
+    --h1-border-bottom: 1px solid black;
+
     --header-height: 36px;
     --header-padding: 5px;
     --header-border-color: #ccc;
@@ -31,6 +33,15 @@ html, body {
     margin: 0;
     padding: 0;
     max-width: unset;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+h1 {
+    border-bottom: var(--h1-border-bottom);
 }
 
 header {
@@ -49,6 +60,7 @@ header > nav {
     margin-left: var(--header-padding);
     line-height: var(--header-height);
     height: 100%;
+    display: flex;
 }
 
 header > nav > #menu {
@@ -82,6 +94,7 @@ header > #search {
     float: right;
     height: 100%;
     text-align: right;
+    font-size: small;
 }
 
 main {
@@ -105,6 +118,11 @@ button.span {
     font-size: inherit;
 }
 
+button.span.material-icons {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
 input:not([type=checkbox]):not([type=radio]), select {
     display: inline-block;
 }
@@ -120,7 +138,7 @@ input:not([type=checkbox]):not([type=radio]), select {
 
 .material-icons.inline {
     font-size: 1em;
-    vertical-align: top;
+    vertical-align: bottom;
     line-height: 1.2;
 }
 
@@ -167,4 +185,78 @@ input:not([type=checkbox]):not([type=radio]), select {
     position: absolute;
     display: flex;
     align-items: center;
+}
+
+.ranking_wrap li .ranking_item .ranking_description {
+    text-align: center;
+}
+
+.ranking_wrap li .ranking_item .ranking_description a {
+    word-break: keep-all;
+    color: inherit;
+}
+
+.search_form input {
+    margin-right: 0;
+    padding-bottom: 10px;
+    border-radius: 6px 0 0 6px;
+}
+
+.search_form a {
+    vertical-align: top;
+}
+
+.search_form button {
+    padding: 10px;
+    margin-left: 0;
+    border-radius: 0 6px 6px 0;
+}
+
+.contribute_banner {
+    padding: 10px;
+    margin: 10px 0;
+    background: #8ee8a0;
+    text-align: center;
+}
+
+.contribute_banner h1 {
+    border: none;
+}
+
+#youtube_area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    background: #8ee8a0;
+    margin-bottom: 10px;
+}
+
+#youtube_area > div {
+    width: calc(40% - 20px);
+    padding: 10px;
+}
+
+#youtube_area .youtube_description {
+    background: white;
+}
+
+#youtube_area .youtube_video {
+    background: white;
+}
+
+#youtube_area .youtube_video iframe {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    #youtube_area {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    #youtube_area > div {
+        width: calc(100% - 20px);
+    }
 }

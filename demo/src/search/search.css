@@ -33,6 +33,27 @@ ul.search_result li .search_image img {
     width: 100%;
 }
 
+ul.search_result li .search_description h3 {
+    text-align: left;
+}
+
+p.search_result {
+    text-align: center;
+    padding: 1em;
+    border: 1px dotted black;
+}
+
+#search_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search_wrap > div {
+    max-width: 768px;
+    width: 100%;
+}
+
 #search_ranking ul.search_result li .search_image {
     background: var(--ranking-search-image-background);
     border-radius: var(--search-image-width);

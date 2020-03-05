@@ -5,6 +5,8 @@
     --howto-recycle-image-margin: 10px;
     --howto-recycle-image-size: 100px;
     --howto-recycle-image-background: #8ee8a0;
+
+    --howto-map-margin-bottom: 10px;
 }
 
 :root {
@@ -44,8 +46,17 @@
     justify-content: center;
 }
 
+#howto_area .howto_recycle > ol li .howto_recycle_description h3 {
+    text-align: left;
+}
+
 #howto_map {
     height: 70vh;
+    margin-bottom: var(--howto-map-margin-bottom);
+}
+
+#howto_list_search {
+    text-align: center;
 }
 
 #howto_list_area {
@@ -66,6 +77,11 @@
     width: 100%;
 }
 
+#howto_list_area article a {
+    font-weight: bold;
+    color: inherit;
+}
+
 #howto_list_nav {
     display: flex;
     justify-content: center;
@@ -84,5 +100,10 @@
     
     #howto_list_area article {
         flex-direction: row;
+        align-items: center;
+    }
+
+    #howto_list_area article .howto_list_image {
+        margin-right: 10px;
     }
 }

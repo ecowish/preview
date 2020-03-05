@@ -1,12 +1,13 @@
 :root {
     --search-area-margin: calc(0px - var(--main-padding));
+    --search-area-margin-bottom: 10px;
     --search-area-height: calc(100vh - var(--computed-header-height));
     --search-area-background: #8ee8a0;
 }
 
 #search_area {
     margin: var(--search-area-margin);
-    margin-bottom: 0;
+    margin-bottom: var(--search-area-margin-bottom);
     height: var(--search-area-height);
     text-align: center;
 
@@ -14,6 +15,14 @@
     flex-direction: column;
     justify-content: center;
     background: var(--search-area-background);
+}
+
+#search_area h1 {
+    border: none;
+}
+
+#search_area .search_form {
+    font-size: x-large;
 }
 
 #ranking_area .ranking_wrap {
@@ -34,43 +43,4 @@
     padding:0;
     margin: 0;
     background: unset;
-}
-
-#youtube_area {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: center;
-    padding: 10px;
-    background: #8ee8a0;
-}
-
-#youtube_area > div {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#youtube_area .youtube_description {
-    background: white;
-}
-
-#youtube_area .youtube_video iframe {
-    width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    #youtube_area {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    
-    #youtube_area > div {
-        width: 100%;
-    }
-
-    #youtube_area .youtube_description {
-        margin-top: 10px;
-    }
 }

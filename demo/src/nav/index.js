@@ -17,16 +17,16 @@ class Navigator extends React.Component {
             <ul id="menu" ref={this.menu_elem}> {
                 Links("li")
             } </ul>
-            <button class="span noselect" id="menuButton" onClick={(event) => {
+            <button class="span noselect material-icons" id="menuButton" onClick={(event) => {
                 var menu = this.menu_elem.current;
                 var display = menu.style.display;
                 
                 menu.style.display = (display == 'block')? 'none':'block';
 
                 event.preventDefault();
-            }}>[메뉴]</button>
+            }}>menu</button>
             <Link to="/" style={{display: "none"}} ref={this.home_link} />
-            <button class="span noselect" onClick={(event) => this.home_link.current.click()}>[홈]</button>
+            <button class="span noselect material-icons" onClick={(event) => this.home_link.current.click()}>home</button>
         </nav>;
     }
 }
