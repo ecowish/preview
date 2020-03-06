@@ -102,12 +102,13 @@ class Howto extends React.Component {
                 <Link to="/howto/a"><button class="default"><i class="material-icons inline">search</i></button></Link>
             </form>
             <div id="howto_list_area">
+            
                 {this.state.playlist.map((item) => {
-                    return <article>
+                    return <article><Link to={"/howto/" + (idx--)}>
                     <div class="howto_list_image">
                         <img src={item.snippet.thumbnails.default.url} alt={item.snippet.title} />
                     </div>
-                    <Link to={"/howto/" + (idx--)}>{item.snippet.title}</Link>
+                    {item.snippet.title}</Link>
                 </article>;
                 })}
             </div>

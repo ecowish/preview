@@ -1,12 +1,11 @@
 :root {
-    --howto-list-item-margin: 5px;
+    --howto-list-item-margin: 10px;
+    --howto-list-margin-top: 20px;
 
     --howto-recycle-margin-bottom: 10px;
     --howto-recycle-image-margin: 10px;
     --howto-recycle-image-size: 100px;
     --howto-recycle-image-background: #00b22d;
-
-    --howto-map-margin-bottom: 10px;
 }
 
 :root {
@@ -52,11 +51,11 @@
 
 #howto_map {
     height: 70vh;
-    margin-bottom: var(--howto-map-margin-bottom);
 }
 
 #howto_list_search {
     text-align: center;
+    margin-top: var(--howto-list-margin-top);
 }
 
 #howto_list_area {
