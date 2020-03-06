@@ -3,45 +3,45 @@
         "caption": "생수",
         "ranking": [
             {
-                "image": "/img/icis eco.png",
+                "image": "img/icis eco.png",
                 "name": "아이시스 eco"
             },
             {
-                "image": "/img/samdasoo.png",
+                "image": "img/samdasoo.png",
                 "name": "제주삼다수"
             },
             {
-                "image": "/img/icis.png",
+                "image": "img/icis.png",
                 "name": "아이시스"
             },
             {
-                "image": "/img/pulmuone.png",
+                "image": "img/pulmuone.png",
                 "name": "풀무원샘물"
             },
             {
-                "image": "/img/kookminwater.png",
+                "image": "img/kookminwater.png",
                 "name": "국민워터",
                 "tiescore": true
             },
             {
-                "image": "/img/baeksansu.png",
+                "image": "img/baeksansu.png",
                 "name": "백산수"
             },
             {
-                "image": "/img/nobrand.png",
+                "image": "img/nobrand.png",
                 "name": "노브랜드 미네랄워터",
                 "tiescore": true
             },
             {
-                "image": "/img/volvic.png",
+                "image": "img/volvic.png",
                 "name": "볼빅"
             },
             {
-                "image": "/img/fiji.png",
+                "image": "img/fiji.png",
                 "name": "피지"
             },
             {
-                "image": "/img/evian.png",
+                "image": "img/evian.png",
                 "name": "에비앙"
             }
         ]
