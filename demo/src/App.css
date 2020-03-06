@@ -27,7 +27,8 @@
     
     --ranking-item-width: 30%;
     --ranking-item-max-width: 30vh;
-    --ranking-item-image-background: #00b22d;
+    --ranking-item-image-background: #efefef;
+    --ranking-item-image-background-hover: #00b22d;
     --ranking-item-per-row: 3;
     --ranking-item-margin: 5px;
 
@@ -203,6 +204,10 @@ input:not([type=checkbox]):not([type=radio]), select {
     position: relative;
 }
 
+.ranking_wrap li .ranking_item .ranking_image_wrap:hover {
+    background: var(--ranking-item-image-background-hover);
+}
+
 .ranking_wrap li .ranking_item .ranking_image_wrap .ranking_image {
     margin-top: -100%;
     height: 100%;
@@ -221,7 +226,7 @@ input:not([type=checkbox]):not([type=radio]), select {
     text-align: center;
 }
 
-.ranking_wrap li .ranking_item .ranking_description a {
+.ranking_wrap li .ranking_item a {
     word-break: keep-all;
     color: inherit;
 }

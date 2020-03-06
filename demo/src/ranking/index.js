@@ -11,30 +11,34 @@ import demoRanking from '../demo/ranking.json';
 export function renderRanking(ranking, category, firstOnTop) {
     var idx = 1, rank = 1;
 
-    return <ul class={"ranking_wrap" + ((firstOnTop)?" firstOnTop":"")}>
-            {
-                ranking.map((item) => {
-                    var obj = (category)?item:item.ranking[0];
-                    if(!item.tiescore) rank=idx;
-                    idx++;
-                    return <li class={(rank == 1)?"first":""}>
+    return <ul class={"ranking_wrap" + ((firstOnTop) ? " firstOnTop" : "")}>
+        {
+            ranking.map((item) => {
+                var obj = (category) ? item : item.ranking[0];
+                if (!item.tiescore) rank = idx;
+                idx++;
+                return <li class={(rank == 1) ? "first" : ""}>
+                    
                         <div class="ranking_item">
-                        <div class="ranking_image_wrap">
-                            <div class="ranking_image">
-                                <img src={obj.image} alt="" />
+                        <Link to={(category) ? "#" : "/ranking/" + item.path}>
+                            <div class="ranking_image_wrap">
+                                <div class="ranking_image">
+                                    <img src={obj.image} alt="" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="ranking_description">
-                            <Link to={(category)?"#":"/ranking/"+item.path}>
-                                <h3>{(category)?(rank)+"위":item.caption+" 분야"}</h3>
+                            <div class="ranking_description">
+
+                                <h3>{(category) ? (rank) + "위" : item.caption + " 분야"}</h3>
                                 <ul>{obj.name.split('\n').map((line) => (<li>{line}</li>))}</ul>
+
+                            </div>
                             </Link>
                         </div>
-                        </div>
-                    </li>
-                })
-            }
-        </ul>;
+                    
+                </li>
+            })
+        }
+    </ul >;
 }
 
 class Ranking extends React.Component {
@@ -53,23 +57,23 @@ class Ranking extends React.Component {
             ranking_orig = demoRanking[category].ranking;
         } else {
             var demoRanking_mutable = JSON.parse(JSON.stringify(demoRanking));
-            for(var cat in demoRanking_mutable) {
+            for (var cat in demoRanking_mutable) {
                 var item = demoRanking_mutable[cat];
                 item.path = cat;
-                for(var ranking in item.ranking) {
+                for (var ranking in item.ranking) {
                     var ranker = item.ranking[ranking];
-                    if(ranking == 0) continue;
-                    if(!ranker.tiescore) break;
+                    if (ranking == 0) continue;
+                    if (!ranker.tiescore) break;
                     item.ranking[0].name += "\n" + ranker.name;
                     console.log(ranking, ranker, item.ranking[0].name);
                 }
                 ranking_orig.push(item);
             }
         }
-        
+
         return <section>
             <h1>편리한 에코 분야별 순위</h1>
-            <h2>{(category)?demoRanking[category].caption + " 분야":"분야별 1위"}</h2>
+            <h2>{(category) ? demoRanking[category].caption + " 분야" : "분야별 1위"}</h2>
             {
                 renderRanking(ranking_orig, category, category)
             }
