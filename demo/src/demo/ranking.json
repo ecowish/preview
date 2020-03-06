@@ -3,50 +3,88 @@
         "caption": "생수",
         "ranking": [
             {
-                "image": "https://company.lottechilsung.co.kr/common/images/mainCon_two_tab8_img1.png",
+                "image": "/img/icis eco.png",
+                "name": "아이시스 eco"
+            },
+            {
+                "image": "/img/samdasoo.png",
+                "name": "제주삼다수"
+            },
+            {
+                "image": "/img/icis.png",
                 "name": "아이시스"
             },
             {
-                "image": "https://company.lottechilsung.co.kr/common/images/mainCon_two_tab8_img1.png",
+                "image": "/img/pulmuone.png",
                 "name": "풀무원샘물"
             },
             {
-                "image": "https://company.lottechilsung.co.kr/common/images/mainCon_two_tab8_img1.png",
-                "name": "제주 삼다수"
+                "image": "/img/kookminwater.png",
+                "name": "국민워터",
+                "tiescore": true
             },
             {
-                "image": "https://company.lottechilsung.co.kr/common/images/mainCon_two_tab8_img1.png",
-                "name": "스파클"
-            }
-        ]
-    },
-    "drink": {
-        "caption": "음료수",
-        "ranking": [
-            {
-                "image": "https://cdn.imweb.me/thumbnail/20181205/5c0780175c74f.png",
-                "name": "코카콜라"
+                "image": "/img/baeksansu.png",
+                "name": "백산수"
             },
             {
-                "image": "https://cdn.imweb.me/thumbnail/20181205/5c0780175c74f.png",
-                "name": "펩시"
+                "image": "/img/nobrand.png",
+                "name": "노브랜드 미네랄워터",
+                "tiescore": true
             },
             {
-                "image": "https://cdn.imweb.me/thumbnail/20181205/5c0780175c74f.png",
-                "name": "롯데 칠성사이다"
+                "image": "/img/volvic.png",
+                "name": "볼빅"
+            },
+            {
+                "image": "/img/fiji.png",
+                "name": "피지"
+            },
+            {
+                "image": "/img/evian.png",
+                "name": "에비앙"
             }
         ]
     },
     "trashbin": {
-        "caption": "쓰레기통 데이터셋",
+        "caption": "서울시 쓰레기통 데이터셋",
         "ranking": [
             {
                 "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
-                "name": "서울 도봉구, 양천구"
+                "name": "서울 도봉구"
+            },{
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 양천구",
+                "tiescore": true
             },
             {
                 "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
-                "name": "서울 강북, 동대문, 동작, 서대문, 성동, 은평"
+                "name": "서울 강북"
+            },
+            {
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 동대문",
+                "tiescore": true
+            },
+            {
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 동작",
+                "tiescore": true
+            },
+            {
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 서대문",
+                "tiescore": true
+            },
+            {
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 성동",
+                "tiescore": true
+            },
+            {
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 은평",
+                "tiescore": true
             },
             {
                 "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
@@ -58,7 +96,12 @@
             },
             {
                 "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
-                "name": "서울 강남구, 송파구"
+                "name": "서울 강남구"
+            },
+            {
+                "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",
+                "name": "서울 송파구",
+                "tiescore": true
             },
             {
                 "image": "https://www.conteenew.com/data/file/artwork/2040957195_JTQOnsMu_64a79c3a9e3cc58cd65618598ca7f3e0bd7e4ef5.png",

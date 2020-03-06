@@ -9,13 +9,15 @@ import './ranking.css';
 import demoRanking from '../demo/ranking.json';
 
 export function renderRanking(ranking, category, firstOnTop) {
-    var rank = 1;
+    var idx = 1, rank = 1;
 
     return <ul class={"ranking_wrap" + ((firstOnTop)?" firstOnTop":"")}>
             {
                 ranking.map((item) => {
                     var obj = (category)?item:item.ranking[0];
-                    return <li>
+                    if(!item.tiescore) rank=idx;
+                    idx++;
+                    return <li class={(rank == 1)?"first":""}>
                         <div class="ranking_item">
                         <div class="ranking_image_wrap">
                             <div class="ranking_image">
@@ -24,8 +26,8 @@ export function renderRanking(ranking, category, firstOnTop) {
                         </div>
                         <div class="ranking_description">
                             <Link to={(category)?"#":"/ranking/"+item.path}>
-                                <h3>{(category)?(rank++)+"위":item.caption+" 분야"}</h3>
-                                <p>{obj.name}</p>
+                                <h3>{(category)?(rank)+"위":item.caption+" 분야"}</h3>
+                                <ul>{obj.name.split('\n').map((line) => (<li>{line}</li>))}</ul>
                             </Link>
                         </div>
                         </div>
@@ -50,9 +52,17 @@ class Ranking extends React.Component {
             category = this.props.match.params.category;
             ranking_orig = demoRanking[category].ranking;
         } else {
-            for(var cat in demoRanking) {
-                var item = demoRanking[cat];
+            var demoRanking_mutable = JSON.parse(JSON.stringify(demoRanking));
+            for(var cat in demoRanking_mutable) {
+                var item = demoRanking_mutable[cat];
                 item.path = cat;
+                for(var ranking in item.ranking) {
+                    var ranker = item.ranking[ranking];
+                    if(ranking == 0) continue;
+                    if(!ranker.tiescore) break;
+                    item.ranking[0].name += "\n" + ranker.name;
+                    console.log(ranking, ranker, item.ranking[0].name);
+                }
                 ranking_orig.push(item);
             }
         }

@@ -176,7 +176,7 @@ input:not([type=checkbox]):not([type=radio]), select {
     flex-wrap: wrap;
 }
 
-.ranking_wrap li {
+.ranking_wrap > li {
     list-style-type: none;
     width: calc((100% / var(--ranking-item-per-row)) - (var(--ranking-item-margin) * 2));
     margin: var(--ranking-item-margin);
@@ -184,9 +184,10 @@ input:not([type=checkbox]):not([type=radio]), select {
     justify-content: center;
 }
 
-.ranking_wrap.firstOnTop li:first-child {
+.ranking_wrap.firstOnTop > li.first {
     width: 100%;
 }
+
 
 .ranking_wrap li .ranking_item {
     width: 100%;
@@ -209,6 +210,11 @@ input:not([type=checkbox]):not([type=radio]), select {
     position: absolute;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.ranking_wrap li .ranking_item .ranking_image_wrap .ranking_image img {
+    max-height: 100%;
 }
 
 .ranking_wrap li .ranking_item .ranking_description {
@@ -218,6 +224,13 @@ input:not([type=checkbox]):not([type=radio]), select {
 .ranking_wrap li .ranking_item .ranking_description a {
     word-break: keep-all;
     color: inherit;
+}
+
+.ranking_wrap li .ranking_item .ranking_description ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .search_form input {
