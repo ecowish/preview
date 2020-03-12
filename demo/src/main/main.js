@@ -18,9 +18,9 @@ class MainPage extends React.Component {
 
         return <section>
             <div id="search_area">
-                <h1>찾으시는 것이 있으신가요?</h1>
+                <h1>분리배출 방법이 궁금한 제품은?</h1>
                 <form class="search_form">
-                    <input id="query" name="query" type="text" placeholder="재활용 방법을 검색해보세요" />
+                    <input id="query" name="query" type="text" placeholder="삼다수" />
                     <Link to="/howto/a"><button class="default"><i class="material-icons inline">search</i></button></Link>
                 </form>
             </div>
@@ -41,7 +41,7 @@ class MainPage extends React.Component {
                     <p>그러게 말입니다.</p>
                 </div>
                 <div class="youtube_video">
-                    <iframe src="https://www.youtube.com/embed/1i2BQ1oZAog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Hr8n9lmFOG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>

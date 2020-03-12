@@ -21,7 +21,7 @@ export default [
     },
     {
         path: "/howto",
-        caption: "슬기로운 분리수거",
+        caption: "슬기로운 분리배출",
         component: Howto,
         exact: true
     },

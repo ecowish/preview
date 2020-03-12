@@ -51,6 +51,7 @@ html, body {
     padding: 0;
     max-width: unset;
     font-family: 'Noto Sans KR', sans-serif;
+    min-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -71,14 +72,17 @@ header {
     background-color: var(--header-background);
     padding: var(--header-padding) 0;
     z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header > nav {
-    float: left;
     margin-left: var(--header-padding);
     line-height: var(--header-height);
     height: 100%;
     display: flex;
+    flex: 0 0 200px;
 }
 
 header > nav > #menu {
@@ -111,10 +115,10 @@ header > nav > #menu > li:last-child {
 header > #search {
     margin-right: var(--header-padding);
     line-height: var(--header-height);
-    float: right;
     height: 100%;
     text-align: right;
     font-size: small;
+    flex: 0 1 200px;
 }
 
 main {

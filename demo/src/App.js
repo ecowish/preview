@@ -14,6 +14,7 @@ class App extends React.Component {
         return <BrowserRouter basename={process.env.PUBLIC_URL}>
             <header>
                 <Navigator />
+                <p id="logo">에코위시</p>
                 <Search />
             </header>
             <Main />

@@ -2,7 +2,7 @@
     --search-area-margin: calc(0px - var(--main-padding));
     --search-area-margin-bottom: 10px;
     --search-area-height: calc(100vh - var(--computed-header-height));
-    --search-area-background: grey;
+    --search-area-background: #f0f0f0;
 }
 
 #search_area {
@@ -23,6 +23,10 @@
 
 #search_area .search_form {
     font-size: x-large;
+}
+
+#search_area .search_form input {
+    background: white;
 }
 
 #ranking_area .ranking_wrap {

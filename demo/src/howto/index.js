@@ -23,7 +23,7 @@ class Howto extends React.Component {
         }
     }
     componentDidMount() {
-        fetch("https://www.googleapis.com/youtube/v3/playlistItems?part=id,snippet,contentDetails&key=AIzaSyDwcYtN_I9jHWzlGs3wv1xaN7Jp0qZfYYk&playlistId=PLcuqPfaAuMQhVTiHGx5sCt6x5aShPbPJ4&maxResults=8")
+        fetch("https://www.googleapis.com/youtube/v3/playlistItems?part=id,snippet,contentDetails&key=AIzaSyDwcYtN_I9jHWzlGs3wv1xaN7Jp0qZfYYk&playlistId=UUuMZqSSgPLfvdHhBL8kuLpw&maxResults=8")
             .then(res => res.json())
             .then((result) => {
                 this.setState({
@@ -62,7 +62,7 @@ class Howto extends React.Component {
                     <p>{(howtoId) ? "이 영상의 ID는 " + howtoId + "입니다." : "그러게 말입니다."}</p>
                 </div>
                 <div class="youtube_video">
-                    <iframe src={"https://www.youtube.com/embed/"+((howtoId)?demoHowto.videoId:"1i2BQ1oZAog")} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src={"https://www.youtube.com/embed/"+((howtoId)?demoHowto.videoId:"Hr8n9lmFOG4")} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             {
@@ -98,7 +98,7 @@ class Howto extends React.Component {
                 })()
             }
             <form id="howto_list_search" class="search_form">
-                <input type="text" placeholder="재활용 방법을 검색해보세요" />
+                <input type="text" placeholder="분리배출 방법이 궁금한 제품은?" />
                 <Link to="/howto/a"><button class="default"><i class="material-icons inline">search</i></button></Link>
             </form>
             <div id="howto_list_area">
@@ -108,7 +108,7 @@ class Howto extends React.Component {
                     <div class="howto_list_image">
                         <img src={item.snippet.thumbnails.default.url} alt={item.snippet.title} />
                     </div>
-                    {item.snippet.title}</Link>
+                    <span>{item.snippet.title}</span></Link>
                 </article>;
                 })}
             </div>

@@ -32,7 +32,7 @@ class Search extends React.Component {
             <h1>{this.props.match.params.keyword} 검색결과</h1>
             <div id="search_wrap">
             <div id="search_howto">
-                <h2>슬기로운 분리수거</h2>
+                <h2>슬기로운 분리배출</h2>
                 <ul class="search_result">
                     {
                         (() => {

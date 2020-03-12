@@ -65,11 +65,9 @@
 }
 
 #howto_list_area article {
-    flex: 1 0;
+    flex: 0 0;
     flex-basis: calc((100% / var(--howto-list-item-per-row)) - (var(--howto-list-item-margin) * 2));
     margin: var(--howto-list-item-margin);
-    display: flex;
-    flex-direction: column;
 }
 
 #howto_list_area article .howto_list_image img {
@@ -79,6 +77,8 @@
 #howto_list_area article a {
     font-weight: bold;
     color: inherit;
+    display: flex;
+    flex-direction: column;
 }
 
 #howto_list_nav {
@@ -97,7 +97,7 @@
         flex-direction: column;
     }
     
-    #howto_list_area article {
+    #howto_list_area article a {
         flex-direction: row;
         align-items: center;
     }
