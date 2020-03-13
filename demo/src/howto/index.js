@@ -19,7 +19,9 @@ class Howto extends React.Component {
         super(props);
 
         this.state = {
-            playlist: []
+            playlist: [],
+            totalResults: 1,
+            page: 1
         }
     }
     componentDidMount() {
@@ -27,7 +29,8 @@ class Howto extends React.Component {
             .then(res => res.json())
             .then((result) => {
                 this.setState({
-                    playlist: result.items
+                    playlist: result.items,
+                    totalResults: result.pageInfo.totalResults
                 })
             });
 
@@ -106,21 +109,56 @@ class Howto extends React.Component {
                 {this.state.playlist.map((item) => {
                     return <article><Link to={"/howto/" + (idx--)}>
                     <div class="howto_list_image">
-                        <img src={item.snippet.thumbnails.default.url} alt={item.snippet.title} />
+                        <img src={item.snippet.thumbnails.standard.url} alt={item.snippet.title} />
                     </div>
                     <span>{item.snippet.title}</span></Link>
                 </article>;
                 })}
             </div>
             <div id="howto_list_nav">
-                <button><i class="material-icons inline">chevron_left</i></button>
-                <button class="default">1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button disabled>&hellip;</button>
-                <button>9</button>
-                <button><i class="material-icons inline">chevron_right</i></button>
+                <button onClick={()=>{this.setState({page: this.state.page - 1})}} disabled={this.state.page == 1}><i class="material-icons inline">chevron_left</i></button>
+                {(()=>{
+                    var result = [];
+                    var page = this.state.page;
+                    var maxPage = Math.ceil(this.state.totalResults / 8);
+                    console.log(this.state.totalResults, maxPage)
+                    for(var p = 1; p <= maxPage; p++) {
+                        if(maxPage > 8) {
+                            if(page < 5 && p == 6) {
+                                result.push(<button disabled>&hellip;</button>);
+                                p = maxPage - 1;
+                                continue;
+                            } else if (page > 4 && page < maxPage - 3) {
+                                if (p == 2) {
+                                    result.push(<button disabled>&hellip;</button>);
+                                    p = page - 2;
+                                    continue;
+                                } else if (p == page + 2) {
+                                    result.push(<button disabled>&hellip;</button>);
+                                    p = maxPage - 1;
+                                    continue;
+                                }
+                            } else if(page > maxPage - 5 && p == 2) {
+                                result.push(<button disabled>&hellip;</button>);
+                                p = maxPage - 5;
+                                continue;
+                            }
+                        } else if (maxPage == 8) {
+                            if(page < 5 && p == 6) {
+                                result.push(<button disabled>&hellip;</button>);
+                                p = maxPage - 1;
+                                continue;
+                            } else if(page > 4 && p == 2) {
+                                result.push(<button disabled>&hellip;</button>);
+                                p = maxPage - 5;
+                                continue;
+                            }
+                        }
+                        result.push(<button class={(page == p)?"default":""}>{p}</button>);
+                    }
+                    return result;
+                })()}
+                <button onClick={()=>{this.setState({page: this.state.page + 1})}} disabled={this.state.page == Math.ceil(this.state.totalResults / 8)}><i class="material-icons inline">chevron_right</i></button>
             </div>
         </section>;
     }
