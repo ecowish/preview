@@ -1,22 +1,27 @@
 {
     "water": {
         "caption": "생수",
+        "criteria": "분리배출에 소요되는 시간",
         "ranking": [
             {
                 "image": "img/icis eco.png",
-                "name": "아이시스 eco"
+                "name": "아이시스 eco",
+                "score": "2초"
             },
             {
                 "image": "img/samdasoo.png",
-                "name": "제주삼다수"
+                "name": "제주삼다수",
+                "score": "10초"
             },
             {
                 "image": "img/icis.png",
-                "name": "아이시스"
+                "name": "아이시스",
+                "score": "11초"
             },
             {
                 "image": "img/pulmuone.png",
-                "name": "풀무원샘물"
+                "name": "풀무원샘물",
+                "score": "12초"
             },
             {
                 "image": "img/kookminwater.png",
@@ -25,7 +30,8 @@
             },
             {
                 "image": "img/baeksansu.png",
-                "name": "백산수"
+                "name": "백산수",
+                "score": "15초"
             },
             {
                 "image": "img/nobrand.png",
@@ -34,15 +40,18 @@
             },
             {
                 "image": "img/volvic.png",
-                "name": "볼빅"
+                "name": "볼빅",
+                "score": "17초"
             },
             {
                 "image": "img/fiji.png",
-                "name": "피지"
+                "name": "피지",
+                "score": "37초"
             },
             {
                 "image": "img/evian.png",
-                "name": "에비앙"
+                "name": "에비앙",
+                "score": "42초"
             }
         ]
     },

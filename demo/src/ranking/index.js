@@ -29,8 +29,13 @@ export function renderRanking(ranking, category, firstOnTop) {
                             <div class="ranking_description">
 
                                 <h3>{(category) ? (rank) + "위" : item.caption + " 분야"}</h3>
+                                {(!category && item.criteria)?(() => (
+                                    <div>({item.criteria} 기준)</div>
+                                ))():""}
                                 <ul>{obj.name.split('\n').map((line) => (<li>{line}</li>))}</ul>
-
+                                {(category && item.score)?(() => (
+                                    <div>({item.score})</div>
+                                ))():""}
                             </div>
                             </Link>
                         </div>

@@ -1,7 +1,7 @@
 :root {
     --search-area-margin: calc(0px - var(--main-padding));
     --search-area-margin-bottom: 10px;
-    --search-area-height: calc(100vh - var(--computed-header-height));
+    --search-area-height: calc(50vh - var(--computed-header-height));
     --search-area-background: #f0f0f0;
 }
 

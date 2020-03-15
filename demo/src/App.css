@@ -72,17 +72,23 @@ header {
     background-color: var(--header-background);
     padding: var(--header-padding) 0;
     z-index: 500;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+}
+
+header > #logo {
+    margin: 0;
+    line-height: var(--header-height);
+    text-align: center;
+    height: var(--header-height);
 }
 
 header > nav {
-    margin-left: var(--header-padding);
+    margin: var(--header-padding) 0 var(--header-padding) var(--header-padding);
     line-height: var(--header-height);
-    height: 100%;
+    height: var(--header-height);
     display: flex;
-    flex: 0 0 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 header > nav > #menu {
@@ -90,8 +96,8 @@ header > nav > #menu {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: var(--computed-header-height);
-    left: 0;
+    top: calc(var(--computed-header-height) - var(--header-padding) - 1px);
+    left: calc(0px - var(--header-padding));
     display: none;
     width: var(--menu-width);
     border-radius: var(--menu-radius);
@@ -113,12 +119,14 @@ header > nav > #menu > li:last-child {
 }
 
 header > #search {
-    margin-right: var(--header-padding);
+    margin: var(--header-padding) var(--header-padding) var(--header-padding) 0;
     line-height: var(--header-height);
-    height: 100%;
+    height: var(--header-height);
     text-align: right;
     font-size: small;
-    flex: 0 1 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 main {
@@ -228,6 +236,8 @@ input:not([type=checkbox]):not([type=radio]), select {
 
 .ranking_wrap li .ranking_item .ranking_description {
     text-align: center;
+    width: 150%;
+    margin: 0 -25%;
 }
 
 .ranking_wrap li .ranking_item a {
@@ -277,6 +287,10 @@ input:not([type=checkbox]):not([type=radio]), select {
     padding: var(--youtube-area-padding);
     background: var(--youtube-area-background);
     margin-bottom: var(--youtube-area-margin-bottom);
+}
+
+#youtube_area h1 {
+    font-size: 1.6em;
 }
 
 #youtube_area > div {
