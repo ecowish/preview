@@ -118,7 +118,7 @@ header > nav > #menu > li:last-child {
     border-bottom: none;
 }
 
-header > #search {
+header > #search_header /* > #search */ {
     margin: var(--header-padding) var(--header-padding) var(--header-padding) 0;
     line-height: var(--header-height);
     height: var(--header-height);
@@ -127,6 +127,19 @@ header > #search {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+header > #search_header > #search {
+    line-height: var(--header-height);
+    height: var(--header-height);
+    text-align: right;
+    font-size: small;
+    display: block !important;
+}
+
+header > #search_header > #searchButton {
+    display: none;
+    height: 100%;
 }
 
 main {
@@ -311,5 +324,20 @@ input:not([type=checkbox]):not([type=radio]), select {
     #youtube_area {
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    header > #search_header > #search {
+        position: fixed;
+        top: var(--computed-header-height);
+        right: 0;
+        background: var(--header-background);
+        margin: 0;
+        padding: var(--header-padding);
+        width: calc(100% - (var(--header-padding) * 2));
+        border-bottom: 1px solid var(--header-border-color);
+        display: none !important;
+    }
+    header > #search_header > #searchButton {
+        display: block;
     }
 }
