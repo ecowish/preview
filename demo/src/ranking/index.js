@@ -79,6 +79,9 @@ class Ranking extends React.Component {
         return <section>
             <h1>편리한 에코 분야별 순위</h1>
             <h2>{(category) ? demoRanking[category].caption + " 분야" : "분야별 1위"}</h2>
+            {(category && demoRanking[category].criteria) ? (() => (
+                <h3>({demoRanking[category].criteria} 기준)</h3>
+            ))() : ""}
             {
                 renderRanking(ranking_orig, category, category)
             }
